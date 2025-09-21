@@ -1,0 +1,14 @@
+{
+  "siteName": "Buckhorn Lodge",
+  "price": "$4,900,000",
+  "address": "2140 Tudor Mountain Rd, Gatlinburg, TN 37738",
+  "contact": { "name": "Jan", "phone": "(865) 555-0123", "email": "jan@example.com" },
+  "renovationRange": "2022–2023",
+  "highlights": ["~10 private acres","~5,000 sq ft","3 BR / 3.5 BA","Sleeps ~14"],
+  "languages": [{"code":"en","label":"English"},{"code":"es","label":"Español"},{"code":"fr","label":"Français"}],
+  "cryptoOptions": ["XRP","BTC","ETH","ADA","SOL"],
+  "seo": {
+    "title": "Buckhorn Lodge — Gatlinburg, TN • For Sale By Owner (FSBO)",
+    "description": "Iconic Smoky Mountain lodge on ~10 private acres. Renovated 2022–2023. For Sale By Owner — private showings by appointment."
+  }
+}

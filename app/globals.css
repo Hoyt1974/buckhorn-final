@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base */
+:root { color-scheme: dark; }
+html, body { @apply bg-bg text-ink m-0 p-0; }
+a { @apply text-ink; }
+.container { @apply mx-auto max-w-6xl px-4; }
+
+/* Hero */
+.hero { @apply relative border-b border-line; min-height: 65vh; }
+.hero-img { @apply absolute inset-0; background: url('/images/hero.jpg') center/cover no-repeat; filter: saturate(1.05); }
+.hero-scrim { @apply absolute inset-0; background:
+  radial-gradient(900px 320px at 50% -10%, rgba(102,166,255,.25), transparent),
+  linear-gradient(180deg, rgba(11,16,32,.35) 0%, rgba(11,16,32,.9) 100%); }
+.hero-inner { @apply relative container py-16 md:py-24; }
+.hero-card { @apply bg-card/70 backdrop-blur border border-line rounded-2xl p-6 md:p-8 shadow-soft max-w-3xl; }
+.hero-title { @apply text-3xl md:text-5xl font-extrabold leading-tight mb-2; }
+.hero-sub { @apply text-sm md:text-base text-muted mb-2; }
+.hero-price { @apply text-xl md:text-2xl font-semibold mb-3; }
+.hero-tag { @apply text-base md:text-lg text-muted mb-2; }
+.hero-desc { @apply text-sm md:text-base text-muted; }
+
+/* Cards / grid */
+.card { @apply bg-card border border-line rounded-2xl p-5 shadow-soft; }
+.btn { @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-bg font-semibold hover:opacity-90; }
+.btn-ghost { @apply inline-flex items-center gap-2 px-4 py-2 rounded-full border border-line hover:bg-white/5; }
+.grid-auto { @apply grid gap-4; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* Gallery */
+.gallery { @apply container grid gap-4; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.gallery .ph { @apply aspect-[4/3] rounded-xl bg-card border border-line; background-image: url('/images/ph-01.svg'); background-size: cover; }
+
+/* === Hero visibility overrides === */
+.hero { min-height: 72vh; }
+.hero-img { background-position: center 30%; }
+.hero-scrim {
+  background:
+    radial-gradient(900px 320px at 50% -10%, rgba(102,166,255,.12), transparent),
+    linear-gradient(180deg, rgba(11,16,32,.20) 0%, rgba(11,16,32,.70) 70%, rgba(11,16,32,.85) 100%);
+}
+.hero-card { background-color: rgba(20,27,45,0.55); }
+
+/* === end overrides === */
