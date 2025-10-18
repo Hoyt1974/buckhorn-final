@@ -8,7 +8,7 @@ export default function GalleryPage() {
     { src: "/images/ph-02.jpg", alt: "Mountain view" },
     { src: "/images/ph-03.jpg", alt: "Kitchen" },
     { src: "/images/ph-04.jpg", alt: "Outdoor firepit" },
-    {src: "/images/ph-05.jpg",alt: "Grand stone fireplace & timber ceilings",},
+    { src: "/images/ph-05.jpg",alt: "Grand stone fireplace & timber ceilings"},
     { src: "/images/ph-06.jpg", alt: "Cozy den with stone hearth" },
     { src: "/images/ph-07.jpg", alt: "Chef’s kitchen – premium appliances" },
     { src: "/images/ph-08.jpg", alt: "Primary suite with sitting area" },
