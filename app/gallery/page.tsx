@@ -6,9 +6,9 @@ export default function GalleryPage() {
   const photos = [
     { src: "/images/ph-01.jpg", alt: "Buckhorn Lodge – Great room" },
     // Later add:
-    // { src: "/images/ph-02.jpg", alt: "Mountain view" },
-    // { src: "/images/ph-03.jpg", alt: "Kitchen" },
-    // { src: "/images/ph-04.jpg", alt: "Outdoor firepit" },
+     { src: "/images/ph-02.jpg", alt: "Mountain view" },
+     { src: "/images/ph-03.jpg", alt: "Kitchen" },
+     { src: "/images/ph-04.jpg", alt: "Outdoor firepit" },
   ];
 
   return (
