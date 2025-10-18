@@ -1,27 +1,37 @@
-import { promises as fs } from 'fs'
-import path from 'path'
+// app/gallery/page.tsx
+import Image from "next/image";
 
-export const metadata = { title: 'Gallery — Buckhorn Lodge' }
-
-export default async function GalleryPage(){
-  const dir = path.join(process.cwd(), 'public', 'images')
-  const entries = await fs.readdir(dir)
-  const allow = new Set(['.jpg','.jpeg','.png','.webp','.gif'])
-  const files = entries
-    .filter(f => !/^hero\./i.test(f) && allow.has(path.extname(f).toLowerCase()))
-    .sort((a,b)=> a.localeCompare(b))
+export default function GalleryPage() {
+  // Start simple: verify ph-01.jpg loads first
+  const photos = [
+    { src: "/images/ph-01.jpg", alt: "Buckhorn Lodge – Great room" },
+    // Later add:
+    // { src: "/images/ph-02.jpg", alt: "Mountain view" },
+    // { src: "/images/ph-03.jpg", alt: "Kitchen" },
+    // { src: "/images/ph-04.jpg", alt: "Outdoor firepit" },
+  ];
 
   return (
-    <section className="container my-10">
-      <h1 className="text-2xl font-bold mb-4">Gallery</h1>
-      <div className="gallery">
-        {files.map((f,i)=> (
-          <div key={i} className="ph" style={{backgroundImage:`url(/images/${f})`}} />
+    <main className="min-h-screen bg-slate-950 text-white px-4 py-10">
+      <h1 className="mb-6 text-3xl font-semibold">Photo Gallery</h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {photos.map((p) => (
+          <div
+            key={p.src}
+            className="relative overflow-hidden rounded-2xl ring-1 ring-white/10 aspect-[4/3]"
+          >
+            <Image
+              src={p.src}
+              alt={p.alt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              priority
+            />
+          </div>
         ))}
       </div>
-      <p className="text-muted text-sm mt-4">
-        Drop any JPG/PNG/WebP files into <code>/public/images</code> — they show here automatically.
-      </p>
-    </section>
-  )
+    </main>
+  );
 }
