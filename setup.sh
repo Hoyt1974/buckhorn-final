@@ -47,9 +47,9 @@ EOT
 cat > site-config.json <<'EOT'
 {
   "siteName": "Buckhorn Lodge",
-  "price": "$4,900,000",
+  "price": "$2,900,000",
   "address": "2140 Tudor Mountain Rd, Gatlinburg, TN 37738",
-  "contact": { "name": "Jan", "phone": "(865) 555-0123", "email": "jan@example.com" },
+  "contact": { "name": "", "phone": "(865) 654-8507", "email": "gregslawn1@gmail.com" },
   "renovationRange": "2022–2023",
   "highlights": ["~10 private acres","~5,000 sq ft","3 BR / 3.5 BA","Sleeps ~14"],
   "languages": [{"code":"en","label":"English"},{"code":"es","label":"Español"},{"code":"fr","label":"Français"}],
@@ -65,7 +65,7 @@ cat > i18n/en.json <<'EOT'
   "hero": {
     "title":"🏡 Buckhorn Lodge – An Iconic Mountain Retreat",
     "sub":"2140 Tudor Mountain Road, Gatlinburg, TN 37738",
-    "price":"$4,900,000",
+    "price":"$2,900,000",
     "tag":"A Smoky Mountain Icon, Ready for Its Next Chapter",
     "desc":"Discover Buckhorn Lodge, a rare chance to own a Smoky Mountain icon on nearly 10 private acres. Fully renovated between 2022–2023, this ~5,000 sq ft estate blends timeless rustic charm with modern luxury. From handcrafted wood details to sweeping mountain views, every corner is designed for unforgettable moments."
   }

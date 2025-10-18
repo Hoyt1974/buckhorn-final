@@ -1,0 +1,9 @@
+/* FORCE-HIDE intrusive dropdowns/popovers and overlays */
+[role="menu"], [role="menuitem"], .menu, .dropdown, .popover, .overlay,
+[aria-haspopup="listbox"], .language-selector, .locale-popup, [data-testid*="dropdown"],
+.popover-panel, .popover-root, .menu-panel, .menu-list {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
