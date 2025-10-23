@@ -61,10 +61,11 @@ export default function Header() {
             >
               {labels.nav.crypto} ▾
             </button> */}
+            {false &&(
             <button className="... opacity-60 cursor-not-allowed" disabled>
   Pay with Crypto (coming soon)
 </button>
-
+            )}
             {showCrypto && (
               <div className="absolute right-0 mt-2 bg-card border border-line rounded-lg shadow-soft min-w-40">
                 {config.cryptoOptions.map((c) => (
